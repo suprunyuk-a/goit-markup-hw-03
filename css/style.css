@@ -17,12 +17,54 @@
   --back-color-button: #188ce8;
 }
 /*Основное для страницы*/
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.container {
+  width: 1230px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.list,
+.main .company-list,
+.task-list,
+.company-title,
+.gallery {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 .body {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
   color: var(--title-color);
 }
+
 .body .header {
   background-color: var(--white-color);
 }
@@ -30,7 +72,14 @@
   cursor: pointer;
 }
 /*Шапка страницы*/
+.cont-nav {
+  display: flex;
+  align-items: center;
+}
 .logo {
+  margin-right: 93px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   text-decoration: none;
@@ -44,15 +93,30 @@
 }
 .nav-page,
 .nav-contact {
+  display: flex;
   list-style-type: none;
+  margin-left: auto;
+
   font-weight: 500;
   font-size: 14px;
 }
+
+.nav-page .item:not(:last-child),
+.nav-contact .item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .nav-page .link {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
   text-decoration: none;
   color: var(--head-color);
 }
 .nav-contact .link {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
   text-decoration: none;
   color: var(--title-color);
 }
@@ -74,6 +138,8 @@
 /*Эффективные решения*/
 .main .effect {
   background-color: var(--back-color-ef);
+  padding-top: 200px;
+  padding-bottom: 210px;
 }
 .effect .effect-text {
   font-weight: 900;
@@ -83,8 +149,14 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 .effect .button-ef {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 32px;
+
   font-weight: 700;
   font-size: 16px;
   font-family: inherit;
@@ -100,10 +172,21 @@
   background-color: var(--back-color-button);
 }
 /*Особенности и команда*/
+.cont-feature {
+  display: flex;
+}
+.feature-title-item {
+  width: 270px;
+}
+.feature-title-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .main .feature {
   list-style-type: none;
 }
 .feature .feature-title {
+  margin: 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -112,6 +195,8 @@
   color: var(--head-color);
 }
 .feature .feature-text {
+  margin-top: 10px;
+  margin-bottom: 0;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -125,9 +210,31 @@
   letter-spacing: 0.03em;
   color: var(--head-color);
 }
-.main .list,
-.main .company-list {
-  list-style-type: none;
+
+.task-list {
+  padding-top: 94px;
+}
+.task-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-item {
+  margin-top: 50px;
+}
+
+.company-cont {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+.company-list:not(:last-child) {
+  margin-right: 30px;
+}
+
+.task-item:not(:last-child) {
+  margin-right: 30px;
 }
 .main .company {
   background-color: var(--back-company);
@@ -150,11 +257,20 @@
 .footer {
   background-color: var(--back-color-ef);
 }
+.cont-footer {
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+.adr-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .footer .footer-logo {
   color: var(--white-color);
 }
 .footer .footer-adress {
   list-style-type: none;
+  padding-top: 20px;
 }
 .footer .link {
   text-decoration: none;
@@ -175,7 +291,16 @@
   list-style-type: none;
   font-size: 14px;
 }
+.filter {
+  display: flex;
+  justify-content: center;
+}
+.cont-filt:not(:last-child) {
+  margin-right: 8px;
+}
 .filter .button-filt {
+  padding: 6px 22px;
+
   letter-spacing: 0.06em;
   color: var(--head-color);
   font-family: inherit;
@@ -195,6 +320,21 @@
   color: var(--white-color);
 }
 /*Работы*/
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.gallery-item {
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+.gallery-item:nth-child(3n) {
+  margin-right: 0px;
+}
+.gallery-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
 .gallery .gallery-link {
   text-decoration: none;
   scroll-snap-type: none;
