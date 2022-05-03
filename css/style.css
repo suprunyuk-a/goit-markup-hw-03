@@ -15,6 +15,8 @@
   --shadow-filt012: rgba(0, 0, 0, 0.12);
   --head-color: #212121;
   --back-color-button: #188ce8;
+  --border-color: #ececec;
+  --border-portfolio: #eeeeee;
 }
 /*Основное для страницы*/
 html {
@@ -25,6 +27,7 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
 h1,
 h2,
 h3,
@@ -58,11 +61,19 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+.sect-task {
+  padding-top: 0px;
+}
 .body {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
   color: var(--title-color);
+}
+
+.header {
+  border-bottom: 1px solid var(--border-color);
 }
 
 .body .header {
@@ -211,9 +222,6 @@ ul {
   color: var(--head-color);
 }
 
-.task-list {
-  padding-top: 94px;
-}
 .task-title {
   display: flex;
   justify-content: space-between;
@@ -328,6 +336,7 @@ ul {
 .gallery-item {
   margin-left: 30px;
   margin-bottom: 30px;
+  border-bottom: 1px solid var(--border-portfolio);
 }
 .gallery-item:nth-child(3n) {
   margin-right: 0px;
