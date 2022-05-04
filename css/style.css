@@ -39,9 +39,12 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
 }
+ul {
+  padding-left: 0;
+}
 
 .container {
-  width: 1230px;
+  width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -81,6 +84,7 @@ ul {
 }
 .body .button {
   cursor: pointer;
+  border: none;
 }
 /*Шапка страницы*/
 .cont-nav {
@@ -212,8 +216,8 @@ ul {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.main .task-list,
-.main .company-title {
+.team-plus {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -227,14 +231,9 @@ ul {
   justify-content: space-between;
 }
 
-.task-item {
-  margin-top: 50px;
-}
-
 .company-cont {
   display: flex;
   justify-content: space-between;
-  padding-top: 50px;
 }
 
 .company-list:not(:last-child) {
@@ -248,6 +247,8 @@ ul {
   background-color: var(--back-company);
 }
 .company .company-party {
+  padding-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -261,14 +262,22 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
 }
+.item-team {
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 /*Нижний колонтитул*/
 .footer {
   background-color: var(--back-color-ef);
+  padding: 60px 0px;
 }
-.cont-footer {
-  padding-top: 50px;
-  padding-bottom: 60px;
-}
+
 .adr-item:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -318,7 +327,6 @@ ul {
   letter-spacing: 0.03em;
   background-color: var(--button-back);
   border-radius: 4px;
-  padding: 6px 22px;
 }
 .filter .button-filt:hover,
 .filter .button-filt:focus {
@@ -332,12 +340,13 @@ ul {
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
+  /* margin-left: -30px;*/
 }
 .gallery-item {
-  margin-left: 30px;
+  margin-right: 30px;
   margin-bottom: 30px;
-  border-bottom: 1px solid var(--border-portfolio);
 }
+
 .gallery-item:nth-child(3n) {
   margin-right: 0px;
 }
@@ -349,6 +358,7 @@ ul {
   scroll-snap-type: none;
 }
 .gallery .gallery-name {
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -360,4 +370,13 @@ ul {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--title-color);
+}
+.gallery-text {
+  padding: 20px 24px;
+  border: 1px solid var(--border-portfolio);
+}
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
